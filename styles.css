@@ -1,0 +1,125 @@
+@charset "utf-8";
+/*
+    Author: Oshman Ansari
+    Date:4/25/21
+    CSS155 Project V1
+    filename: styles.css
+
+
+This stylesheet has been created to change the appearance of the pages
+found on my project website. Currently I'm keeping all fonts Tahoma,
+but that will change in the future.
+
+
+Learning outcomes featured in this stylesheet: 
+
+M2LO3 Demonstrate style precedence and inheritance in CSS 
+    Precedence: Changing the font colors for certain elements (i.e. hyperlink for RATC website is red) demonstrates precedence, as the last defined value within the element has precedence
+    Inheritance: The text color applied to the body element is present in all elements contained within, unless otherwise specifified. This demonstrates inheritance
+
+M2LO4 Demonstrate external, embedded, and inline styles
+    Embedded: The background color was embedded in the HTML of the pages instead of using a stylesheet to apply it
+    Inline: The link color for the RATC website on about.html was set using an inline style
+
+M2LO5 Demonstrate contextual selectors
+    There is a contextual selector for the nav bar links, specifying that only the nav links will not be underlined
+    The ordered list text color has been changed using contextual selectors
+
+M2LO6  Demonstrate a CSS id and a CSS class selector
+    ID: Paragraph ID "about" was used to adjust font size of a particular paragraph
+    Class: UL class "fluff" was used to change text color
+
+M2LO7 Demonstrate a CSS attribute selector other than class or id
+    Used alt attribute to select image element(s) to align to center
+
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector
+    Pseudo-class: Selected even and odd OL elements to modify separately
+    Pseudo-element: Selected first letter of paragraph elements to enlarge
+
+M2LO12 Demonstrate how CSS can change presentation of page elements
+    Image alignment was changed using CSS instead of HTML
+
+M2LO13 Demonstrate how CSS can change presentation of textual elements
+    Fonts, text size and text colors have been set using CSS
+
+M2LO14 Demonstrate and explain the use of progressive enhancement in CSS
+    Utilized color name, RGB and HSL values to describe font colors
+    
+M2LO15 Apply colors using CSS
+    Both page background and font colors were set using CSS instead of HTML
+
+*/
+
+/* HTML and Body Styles*/
+
+body {
+    color: rgb(215, 0, 215);
+    color: hsl(200, 240, 101);
+    font-family: Tahoma, sans-serif;
+}
+
+
+/* Heading Styles*/
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    font: small-caps 1.9em Tahoma;
+}
+
+/* Navigation Styles */
+nav > ul > li > a {
+    text-decoration: none;
+}
+
+
+/* Section Styles */
+
+
+
+/* List Styles */
+ul ol {
+    color: blueviolet
+}
+
+li.fluff {
+    color: darkorchid
+}
+
+ol > li:nth-of-type(even) {
+    font: italic 1.2em Tahoma;
+}
+
+ol > li:nth-of-type(odd) {
+    font: normal 1.2em impact;
+}
+
+/* Article Styles */
+
+
+
+
+/* Paragraph Styles */
+p {
+    color:seagreen
+}
+
+p#about {
+    font-size: larger;
+}
+
+p::first-letter {
+    font-size: 125%;
+}
+
+/* Image Styles */
+
+img[alt~=welcome] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
